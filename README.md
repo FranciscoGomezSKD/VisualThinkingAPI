@@ -48,11 +48,9 @@ Para cumplir los requerimientos se diseñaron 3 clases
 
 # Dependencias
 
-<ul>
-  <li>JEST</li>
-  <li>Eslint</li>
-  <li>Express</li>
-</ul>
+* JEST --> Usada para pruebas unitarias
+* Eslint --> Usada para corrección de estilo en el código
+* Express --> Usada para levantar el server
 
 # End points
 
