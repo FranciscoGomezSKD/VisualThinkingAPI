@@ -1,13 +1,14 @@
-# Code Challenger LaunchX
-Visual Partner-Ship te ha asignado el siguiente proyecto:
-Requerimientos:
+# Visual Thinking API
+Los requerimientos que Visual Partner-Ship nos pide son los siguientes: 
 
  - Habilitar un endpoint para consultar todos los estudiantes con todos sus campos.
  - Habilitar un endpoint para consultar los emails de todos los estudiantes que tengan certificación *haveCertification*.
  - Habilitar un endpoint para consultar todos los estudiantes que tengan credits mayor a 500.
   
 # Diseño de componentes
-Se ha diseñado un API con 3 endpoints diferentes, para ello se ocupa un divide el flujo donde el componente *Server* es el encargado de recibir las peticiones y direccionarlas al Controlador *StudentController* que a su vez hace uso del Servicio *StudentService* que utiliza un componente *Reader* para leer el archivo con los datos en formato JSON.
+Similar al ejercicio anterior, se utiliza la misma estructura o flujo en la programación.
+La clase Server, se encarga de recibir las peticiones y procesarlas utilizando la clase StudentController. Esta a su vez, manda a llamar al control StudentService desde el cual se utiliza la utilidad Reader para obtener de la base de datos (en formato JSON), la informacion de los estudiantes.
+
 ```mermaid
 flowchart TD
     A[Server] --> B[StudentController]
@@ -55,8 +56,3 @@ Para cumplir los requerimientos se diseñaron 3 clases
 - */v1/students* : Lista la información completa de todos los estudiantes.
 - */v1/studentsCertificated* : Lista los correos de los alumnos certificados.
 - */v1/studentsWithCredits* : Lista la información completa de los alumnos que tengan mas de 500 créditos.
-
-# Documentación del API
-En esta liga se encuentra la documentación de como utilizar los endpoints del API y ejemplos de uso.
-[link](https://hectorsampieri.github.io/students-SV-API/)
- 
