@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "node ./lib/server.js",
+    "test": "jest",
+    "linter": "node ./node_modules/eslint/bin/eslint.js",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix",
+    "apidoc": "apidoc -c ./documentation/apidoc.json -i ./documentation/ -o ./docs"
   },
   "repository": {
     "type": "git",
@@ -16,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/FranciscoGomezSKD/VisualThinkingAPI/issues"
   },
-  "homepage": "https://github.com/FranciscoGomezSKD/VisualThinkingAPI#readme"
+  "homepage": "https://github.com/FranciscoGomezSKD/VisualThinkingAPI#readme",
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "jest": "^26.0.0"
+  }
 }
